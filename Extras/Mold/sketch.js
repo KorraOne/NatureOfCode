@@ -1,4 +1,4 @@
-let molds = []; let amount = 10;
+let molds = []; let amount = 5000;
 let d;
 var canvas;
 
@@ -16,6 +16,12 @@ function draw() {
   frameRate();
   background(0, 10);
 
+  if (mouseInCanvas()) {
+    fill(255, 0, 0);
+    circle(mouseX, mouseY, 20);
+  }
+
+
   loadPixels();
   for (i=0; i<amount; i++) {
     molds[i].update();
@@ -28,4 +34,8 @@ function getIndex(col, row) {
   row = floor(row);
   index = 4*(d*row) * (d*width) + 4*(d*col);
   return index;
+}
+
+function mouseInCanvas() {
+  return mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height
 }

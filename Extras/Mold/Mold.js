@@ -1,14 +1,14 @@
 class Mold{
-    constructor(x, y, color) {
+    constructor(x, y) {
         this.position = createVector(x, y)
         this.velocity = createVector(0, 0);
         
         this.angle = random(TWO_PI);
         this.radius = 0.5;
 
-        this.leftSensor = new Sensor(this, -PI/4, 30);
-        this.frontSensor = new Sensor(this, 0, 30);
-        this.rightSensor = new Sensor(this, PI/4, 30);
+        this.leftSensor = new Sensor(this, -PI/4, 10);
+        this.frontSensor = new Sensor(this, 0, 10);
+        this.rightSensor = new Sensor(this, PI/4, 10);
     }
 
     edges() {
