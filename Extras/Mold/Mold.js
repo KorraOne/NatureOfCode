@@ -35,7 +35,7 @@ class Mold{
         if (val == this.frontSensor.rVal) {
             this.angle += 0;
         } else if (val == this.leftSensor.rVal) {
-            this.angle -= PI/4;
+            this.angle -= PI/16;
         } else if (val == this.rightSensor.rVal) {
             this.angle += PI/4;
         } else {
