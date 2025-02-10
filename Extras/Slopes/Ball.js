@@ -17,7 +17,7 @@ class Ball {
     if (this.position.y > height - this.radius) {
       this.position.y = height - this.radius;
     }
-  }
+    }
 
   update() {
     // gravity

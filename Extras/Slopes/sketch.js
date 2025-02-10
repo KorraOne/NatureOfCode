@@ -7,7 +7,7 @@ function setup() {
 
   gravity = createVector(0, 0.01);
 
-  ball = new Ball(width/4, 0);
+  ball = new Ball(width/4, 350);
   slope = new Slope(0, height/2, width, height)
 }
 

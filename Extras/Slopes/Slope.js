@@ -17,7 +17,7 @@ class Slope {
   }
 
   force(object) {
-    let force = createVector(0.1, -object.velocity.y);
+    let force = createVector(0.2, -object.velocity.y);
     object.applyForce(force);
   }
 
