@@ -16,7 +16,7 @@ let mousePos;
 function setup() {
   createCanvas(1000, 600);
 
-  dropHeight = 1;
+  dropHeight = 100;
   ruler = new Ruler(height);
   mousePos = createVector(mouseX, mouseY);
 
