@@ -14,7 +14,7 @@ class Celestialbody {
     this.frames = 0;
     this.falling = true;
   }
-
+  
   info() {
     strokeWeight(0);
     textAlign(CENTER);

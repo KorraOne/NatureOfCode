@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.comparison {
+  flex: 1;
+}
+.topic {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.ranked-list {
+  flex: 1;
+  margin-top: 20px;
+  text-align: left;
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+}

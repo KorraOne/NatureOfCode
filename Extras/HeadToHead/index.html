@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparisons</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+  </head>
+<body>
+    <h1>Head-to-Head Ranking</h1>
+    <div class="container">
+        <div id="comparison" class="comparison">
+            <div class="topic" id="leftTopic" data-side="left" onclick="selectTopic('left')"></div>
+            <div class="topic" id="rightTopic" data-side="right" onclick="selectTopic('right')"></div>
+        </div>
+        <div class="ranked-list" id="ranking">
+            <h2>Ranked Topics</h2>
+        </div>
+        <button onclick="addTopic()">Add New Topic</button>
+    </div>
+
+    <script src="utility.js"></script>
+</body>
+</html>
