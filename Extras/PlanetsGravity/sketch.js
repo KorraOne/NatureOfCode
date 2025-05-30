@@ -1,6 +1,6 @@
 
 // conversion of real values to canvas
-let metreScalar = 6300;    // 6300px for irl==
+let metreScalar = 20;    // 6300px for irl==
 let secondScalar = 60;    // 60frames
 
 let sunObject, mercuryObject, venusObject, earthObject, moonObject, 
