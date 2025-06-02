@@ -1,19 +1,24 @@
 let cells = [];
-let w = 4;
-let y = 0;
+let cellsHistory = [];
+let w = 10;
 let ruleNumber = 33;
 let ruleSet = [];
 
 function setup() {
-  createCanvas(1000, 10000);
+  createCanvas(1000, 600);
   resetSimulation();
 }
 
 function draw() {
-  for (let i = 0; i < cells.length; i++) {
-    noStroke();
-    fill(255 - cells[i] * 255);
-    rect(i * w, y, w, w);
+  background(127);
+  
+  for (let i = 0; i < cellsHistory.length; i++) {
+    for (let j = 0; j < cells.length; j++) {
+      noStroke();
+      fill(255 - cellsHistory[i][j] * 255);
+      rect(j * w, i * w, w, w);
+      
+    }
   }
 
   let nextCells = [];
@@ -23,11 +28,18 @@ function draw() {
     let right = cells[(i + 1) % cells.length];
 
     let newState = calculateNextGen(left, mid, right);
-    nextCells[i] = newState;
+    nextCells.push(newState);
+  }
+
+  cellsHistory.push([...nextCells]);
+
+  if (cellsHistory.length > floor(height / w)) {
+    cellsHistory.shift();
   }
 
   cells = nextCells;
-  y += w;
+
+  frameRate(10);
 }
 
 function keyPressed() {
@@ -41,12 +53,13 @@ function keyPressed() {
 }
 
 function resetSimulation() {
-  background(220);
-  y = 0;
+  background(127);
   ruleSet = decimalToRuleSet(ruleNumber);
 
   cells = new Array(floor(width / w)).fill(0);
   cells[floor(cells.length / 2)] = 1;
+
+  cellsHistory = [ [...cells] ];
 }
 
 function calculateNextGen(left, mid, right) {
